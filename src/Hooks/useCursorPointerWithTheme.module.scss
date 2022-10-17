@@ -1,0 +1,7 @@
+.interactiveElementHTML {
+  cursor: url(../assets/icon/hand-cursor-transparent-dark.svg), auto;
+
+  &.interactiveElementHTMLDark {
+    cursor: url(../assets/icon/hand-cursor-transparent.svg), auto;
+  }
+}
