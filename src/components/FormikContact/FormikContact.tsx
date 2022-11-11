@@ -7,6 +7,9 @@ import useCursorPointerWithTheme from "../../Hooks/useCursorPointerWithTheme";
 import useTranslation from "../../Hooks/useTranslation";
 import emailjs from "emailjs-com";
 import Tooltip from "../Tooltip/Tooltip";
+import notify from "../../utils/helpers/notify";
+import Toastify from "../Toastify/Toastify";
+import {EMAIL_JS_API, EMAIL_SERVICE, EMAIL_TEMPLATE, PRIVACY_POLICY_API} from "../../utils/constants/api.constants";
 
 interface FormValues {
     nameInput?: string,
@@ -24,22 +27,27 @@ const FormikContact = () => {
     const {theme} = useContext(ThemeContext);
     const styleCursorPointer = useCursorPointerWithTheme();
     const inputRef = useRef<HTMLInputElement | null>(null);
+
     useEffect(() => {
         inputRef.current?.focus();
     }, []);
 
-    const [styleForTooltip, setStyleForTooltip] = useState(classes.hideTooltip)
+    const [isShowTooltip, setIsShowTooltip] = useState(false)
     const [isErrorInput, setIsErrorInput] = useState(false)
 
     const handleShowTooltip = () => {
-        setStyleForTooltip(classes.showTooltip);
+        setIsShowTooltip(true);
     }
 
     const handleHideTooltip = () => {
-        setStyleForTooltip(classes.hideTooltip);
+        setIsShowTooltip(false);
     }
 
     const cx = classNames.bind(classes);
+
+    const tooltipStyle = cx('tooltip', {
+        tooltipShow: isShowTooltip,
+    });
 
     const validate = (values: FormValues | HTMLFormElement) => {
         const errors: any = {};
@@ -65,14 +73,14 @@ const FormikContact = () => {
             errors.conditionsCheckbox = 'Required';
         }
 
-        const isEmpty= Object.keys(errors).length == 0;
+        const isEmpty = Object.keys(errors).length === 0;
         setIsErrorInput(isEmpty)
         return errors;
     };
 
     let disableForm = false;
     const [isSendingForm, setIsSendingForm] = useState(disableForm);
-    const formWrapper = cx('sendingFormWrapper', {
+    const sendingBlurWrapper = cx('sendingBlurWrapper', {
         sending: isSendingForm,
     });
 
@@ -136,14 +144,16 @@ const FormikContact = () => {
         onSubmit: (values, {resetForm}) => {
             const formElement: any = document.querySelector('.contact-form');
             setIsSendingForm(true);
-            emailjs.sendForm('service_0016a8a', 'template_gmqr0fp', formElement, 'Bcfmdz3E5TNjZHIL1')
+            emailjs.sendForm(EMAIL_SERVICE, EMAIL_TEMPLATE, formElement, EMAIL_JS_API)
                 .then(() => {
                     setIsSendingForm(false);
                     resetForm();
+                    notify('Email sent successfully :)', 'success', null)
                 })
                 .catch((error) => {
-                    console.error('FAILED...', error);
+                    const errorVariable = `FAILED... status: ${error.status} :(`
                     setIsSendingForm(false);
+                    notify(errorVariable, 'error', null);
                 });
         },
     });
@@ -275,9 +285,14 @@ const FormikContact = () => {
                 />
                 <div
                     className={termConditionsCheckbox}
-                    onMouseEnter={handleShowTooltip}
-                    onMouseLeave={handleHideTooltip}
                 >
+                    <Tooltip
+                        tooltipText={useTranslation('home-section-contact.conditions-tooltip')}
+                        tooltipLink={useTranslation('home-section-contact.conditions-tooltip-link')}
+                        tooltipUrl={PRIVACY_POLICY_API}
+                        className={tooltipStyle}
+                        classNameCursor={styleCursorPointer}
+                    />
                     <input
                         id="checkbox-1"
                         type="checkbox"
@@ -287,11 +302,9 @@ const FormikContact = () => {
                     <label
                         htmlFor="checkbox-1"
                         className={styleCursorPointer}
+                        onMouseEnter={handleShowTooltip}
+                        onMouseLeave={handleHideTooltip}
                     >
-                        <Tooltip
-                            tooltipText={useTranslation('home-section-contact.conditions-tooltip')}
-                            className={styleForTooltip}
-                        />
                         {useTranslation('home-section-contact.conditions')}
                         {formik.errors.conditionsCheckbox ?
                             <div className={classes.errors}>{formik.errors.conditionsCheckbox}</div> : null}
@@ -305,7 +318,8 @@ const FormikContact = () => {
                     {useTranslation('home-section-contact.submit')}
                 </button>
             </form>
-            <div className={formWrapper}> </div>
+            <div className={sendingBlurWrapper}> </div>
+            {Toastify()}
         </>
     );
 };

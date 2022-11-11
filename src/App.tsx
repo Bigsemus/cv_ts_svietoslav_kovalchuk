@@ -20,7 +20,8 @@ interface MyMessagesData {
 function App() {
     const { theme } = useContext(ThemeContext);
     const [arrSMS, setArrSMS] = useState<MyMessagesData | null>(null);
-
+    const renderStudyingMessages: () => React.ReactNode = () => <Message message={arrSMS?.studyingMessages} />
+    const renderAboutMessages: () => React.ReactNode = () => <Message message={arrSMS?.aboutMessages} />
     const fetchMessage = React.useCallback(async () => {
         const arrOfObjectsOfMessage = await mockMessageApi.getMessage();
         setArrSMS(arrOfObjectsOfMessage);
@@ -30,10 +31,6 @@ function App() {
     useEffect(() => {
         fetchMessage()
     }, [fetchMessage]);
-
-
-     const renderStudyingMessages: () => React.ReactNode = () => <Message message={arrSMS?.studyingMessages} />
-     const renderAboutMessages: () => React.ReactNode = () => <Message message={arrSMS?.aboutMessages} />
 
     useEffect(()  => {
         document.body.style.background = theme.bodyBGColor;

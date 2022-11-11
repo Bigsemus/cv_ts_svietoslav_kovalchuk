@@ -1,4 +1,4 @@
-@import "./src/styles/variables";
+@import "../../utils/constants/styleVariable";
 
 .interactiveElementHTML {
   cursor: url(../../assets/icon/hand-cursor-transparent-dark.svg), auto;
@@ -201,12 +201,12 @@
 
 // DisableWrapper
 
-.sendingFormWrapper {
+.sendingBlurWrapper {
   height: 866px;
   width: 1519px;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   backdrop-filter: blur(3px);
   background: url("../../assets/loader.gif") center / 50px no-repeat;
   opacity: 0;
@@ -218,16 +218,15 @@
   }
 }
 
-.showTooltip{
-  display: block;
+.tooltip{
   width: 350px;
   height: 90px;
+  opacity: 0;
+  transition: opacity 1s;
+  &Show{
+    opacity: 1;
+  }
 }
-
-.hideTooltip{
-   display: none;
- }
-
 
 .submitBtn{
   color: $color-white;

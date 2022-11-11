@@ -1,19 +1,16 @@
-@import 'src/styles/variables';
+@import '../../utils/constants/styleVariable';
 
 .tooltipContainer {
-  //display: none;
-  background: $color-white;
+  background: $colorSun;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 7px);
+  transform: translate(-23%, -100px);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  opacity: 0.9;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .tooltipContainer.bottom {
-  top: 100%;
+  top: 0;
 }
 
 .tooltipContainer.top {
@@ -21,8 +18,8 @@
 }
 
 .tooltip {
-  z-index: 2000;
-  background: $color-white;
+  z-index: 1000;
+  background: $colorSun;
   width: 100%;
   color: $color-text;
   font-size: 14px;
@@ -32,6 +29,10 @@
   word-break: break-word;
   text-align: center;
   border-radius: 4px;
+}
+
+.link{
+  color: $color-text;
 }
 
 .triangle {
@@ -62,12 +63,12 @@
   top: -12px;
 
   &::after {
-    border-color: transparent transparent $color-white transparent;
+    border-color: transparent transparent $colorSun transparent;
   }
 
   &::before {
     margin-top: -3px;
-    border-color: transparent transparent rgba($color-text, .1) transparent;
+    border-color: transparent transparent rgba($colorSun, .1) transparent;
   }
 }
 
@@ -75,11 +76,11 @@
   bottom: 0;
 
   &::after {
-    border-color: $color-white transparent transparent transparent;
+    border-color: $colorSun transparent transparent transparent;
   }
 
   &::before {
     margin-top: 1px;
-    border-color: rgba($color-text, .1) transparent transparent transparent;
+    border-color: rgba($colorSun, .1) transparent transparent transparent;
   }
 }

@@ -59,6 +59,7 @@ const en = {
     'radio3': 'Other',
     'conditions': 'Terms & Conditions',
     'conditions-tooltip': 'Your data from the form will be sent only to me so that I can contact you as soon as possible.',
+    'conditions-tooltip-link': 'Privacy Policy',
     'submit': 'Submit',
     'title-little2': 'Contact information',
     'sub-title': 'Feel free to contact us for any of your questions, we’ll get back to you as soon as possible',
