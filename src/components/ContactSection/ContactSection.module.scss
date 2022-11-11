@@ -1,0 +1,24 @@
+@import "../../utils/constants/styleVariable";
+
+.interactiveElementHTML {
+  cursor: url(../../assets/icon/hand-cursor-transparent-dark.svg), auto;
+  &.interactiveElementHTMLDark {
+    cursor: url(../../assets/icon/hand-cursor-transparent.svg), auto;
+  }
+}
+
+
+.contactlink {
+  font-weight: bold;
+  text-decoration: none;
+  color: $color-text;
+
+  &.active {
+    color: rgb(251, 251, 251);
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accordeon-hover;
+  }
+}

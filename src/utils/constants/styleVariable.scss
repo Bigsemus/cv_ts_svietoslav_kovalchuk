@@ -1,0 +1,60 @@
+$h1: 50px;
+$h2: 30px;
+$h3: 25px;
+$h4: 18px;
+$h4-link: 18px bold;
+
+$color-text: #474747;
+$color-input-focus: #363636;
+$color-body: #FBFBFB;
+$color-white: #FFFFFF;
+$color-blue: #AAB6FF;
+$color-light-blue: #6BE4D5;
+$color-active: #B64747;
+$color-accordeon-hover: #CF5858;
+$color-primary: #EC6767;
+$color-light-grey: #CEC7C7;
+$color-input-grey: #A6A6A6;
+$color-input-hover: rgba(143, 141, 141, 0.56);
+$colorDarkScooter: #2aacc0;
+$colorMarsh: #939f72;
+$colorMagnolia: #fbf6ff;
+$colorMustard: #f1c40f;
+$colorSun: #FFCF96;;
+$colorRose: #b22746;
+$colorLightCyan: #e1f6f9;
+$colorLavenderBlush: #fbf0f2;
+
+%primary {
+  border: none;
+  height: 48px;
+  width: 220px;
+  background-color: #EC6767;
+}
+
+%disabled {
+  border: none;
+  height: 48px;
+  width: 220px;
+  background-color: $color-input-grey;
+}
+
+%hover {
+  border: none;
+  height: 48px;
+  width: 220px;
+  background-color: #CF5858;
+}
+
+%active {
+  border: none;
+  height: 48px;
+  width: 220px;
+  background-color: #B64747;
+}
+
+@mixin grid-markup {
+  display: grid;
+  grid-template-columns: repeat(12, 7.14%);
+  column-gap: 1.3%;
+}

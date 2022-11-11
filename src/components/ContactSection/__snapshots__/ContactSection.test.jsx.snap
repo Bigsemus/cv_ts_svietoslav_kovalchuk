@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render ContactSection 1`] = `
+<div>
+  <section
+    class="main__contact main-contact"
+    id="contact"
+  >
+    <div
+      class="wrapper"
+    >
+      <h2
+        class="main__title"
+      >
+        Contact
+      </h2>
+      <hr
+        class="main__line"
+      />
+      <div
+        class="grid-markup"
+      >
+        <div
+          class="grid-markup__main-grid-block grid-markup__main-grid-block--left"
+        >
+          <h3
+            class="main__title-little"
+          />
+          <form
+            class="main-contact__contact-form contact-form"
+            name="ContactForm"
+          >
+            <div
+              class="contact-form__row contact-form__row--first"
+            >
+              <label>
+                First name
+                 *
+                <input
+                  class="contact-form__input"
+                  name="nameInput"
+                  placeholder="  John"
+                  type="text"
+                />
+              </label>
+              <label>
+                Email
+                 *
+                <input
+                  class="contact-form__input"
+                  name="emailInput"
+                  placeholder="  example@email.com"
+                  type="email"
+                />
+              </label>
+            </div>
+            <div
+              class="contact-form__row"
+            >
+              <label>
+                Last name
+                <input
+                  class="contact-form__input"
+                  name="lastNameInput"
+                  placeholder="  Johnson"
+                  type="text"
+                />
+              </label>
+              <label>
+                Phone
+                 *
+                <input
+                  class="contact-form__input"
+                  name="phoneInput"
+                  placeholder="  + 000 123 456 789"
+                  type="tel"
+                />
+              </label>
+            </div>
+            <div
+              class="contact-form__sex-radio sex-radio"
+            >
+              <p
+                class="sex-radio__title"
+              >
+                Choose option:
+              </p>
+              <div
+                class="sex-radio__item"
+              >
+                <input
+                  id="radio-1"
+                  name="radio"
+                  type="radio"
+                  value="1"
+                />
+                <label
+                  for="radio-1"
+                >
+                  Male
+                </label>
+              </div>
+              <div
+                class="sex-radio__item"
+              >
+                <input
+                  id="radio-2"
+                  name="radio"
+                  type="radio"
+                  value="2"
+                />
+                <label
+                  for="radio-2"
+                >
+                  Female
+                </label>
+              </div>
+              <div
+                class="sex-radio__item"
+              >
+                <input
+                  id="radio-3"
+                  name="radio"
+                  type="radio"
+                  value="3"
+                />
+                <label
+                  for="radio-3"
+                >
+                  Other
+                </label>
+              </div>
+            </div>
+            <textarea
+              class="contact-form__textarea"
+              name="messageTextArea"
+              placeholder="Message"
+            />
+            <div
+              class="contact-form__checkbox"
+            >
+              <input
+                id="checkbox-1"
+                name="conditionsCheckbox"
+                type="checkbox"
+              />
+              <label
+                for="checkbox-1"
+              >
+                Terms & Conditions
+              </label>
+            </div>
+            <button
+              class="contact-form__submit"
+              name="submit"
+              role="button"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <div
+          class="grid-markup__main-grid-block grid-markup__main-grid-block--right"
+        >
+          <h3
+            class="main__title-little"
+          >
+            Contact information
+          </h3>
+          <p
+            class="main-contact__sub-title-information"
+          >
+            Feel free to contact us for any of your questions, we’ll get back to you as soon as possible
+          </p>
+          <div
+            class="main-contact__data-company data-company"
+          >
+            <img
+              alt="address-icon"
+              src="Combined Shape.png"
+            />
+            <span
+              class="data-company__item"
+            >
+              Epam
+            </span>
+            <span
+              class="data-company__item"
+            >
+              Barykadna, 16
+            </span>
+            <span
+              class="data-company__item"
+            >
+              Ukraine, Dnipro
+            </span>
+          </div>
+          <p
+            class="main-contact__contact contact"
+          >
+            <img
+              alt="phone-icon"
+              class="contact__logo"
+              src="Combined Shape.png"
+            />
+            Phone:
+            <a
+              class="contact__link main__link-text main__link-text--dark"
+              href="tel:+380500890028"
+            >
+               +380500890028
+            </a>
+          </p>
+          <p
+            class="main-contact__contact"
+          >
+            <img
+              alt="phone-icon"
+              class="contact__logo"
+              src="Combined Shape.png"
+            />
+            Email:
+            <a
+              class="contact__link main__link-text main__link-text--primary"
+              href="mailto:Svietoslav.Kovalchuk@gmail.com"
+            >
+               Svietoslav.Kovalchuk@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

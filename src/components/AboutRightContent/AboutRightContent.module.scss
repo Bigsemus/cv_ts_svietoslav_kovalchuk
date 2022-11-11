@@ -1,0 +1,21 @@
+@import "../../utils/constants/styleVariable";
+
+.accordeonlink {
+  display: inline-block;
+  width: 220px;
+  border-bottom: 1px solid $color-light-grey;
+  padding: 0 0 6px 29px;
+  margin-left: -15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: $color-text;
+
+  &.active {
+    color: rgb(251, 251, 251);
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accordeon-hover;
+  }
+}

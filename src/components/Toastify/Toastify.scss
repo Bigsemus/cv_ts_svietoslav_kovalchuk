@@ -1,0 +1,50 @@
+@import '../../utils/constants/styleVariable';
+
+.toast > div > div {
+  margin: 0;
+}
+
+.toast-container {
+  background-color: transparent;
+  padding: 0 50px;
+  border-radius: 0;
+  //animation: none;
+
+  div:first-child {
+    height: 110px;
+    font-weight: 600;
+  }
+}
+
+div > .toast {
+  z-index: 100;
+  width: 100vw;
+  left: 50%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+
+  &-error {
+    color: $colorRose;
+    background: $colorLavenderBlush !important;
+  }
+
+  &-success {
+    color: $colorDarkScooter;
+    background: $colorLightCyan !important;
+  }
+
+  &-warn {
+    color: $colorMagnolia;
+    background: $colorMustard !important;
+  }
+
+  &-info {
+    color: $colorMarsh;
+    background: $colorMarsh !important;
+  }
+}
+
+.Toastify__toast--default {
+  background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+}
