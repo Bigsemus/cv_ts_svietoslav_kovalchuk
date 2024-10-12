@@ -14,7 +14,7 @@ const en = {
     'welcome': 'Welcome !',
     'welcome-to': 'Welcome to',
     'sub-title1': 'React is a library for creating user interfaces. One of its distinguishing features is the ability to use JSX, a programming language with a syntax close to HTML that compiles to JavaScript. Developers can achieve high application performance like for example -',
-    'sub-title2': 'with Virtual DOM.',
+    'sub-title2': 'with Virtual DOM. ( ! You can use the fake email, like "123" - it for demonstration only).',
     'sub-title3': ' With React, you can create isomorphic applications that will help you get rid of the unpleasant situation when the user is impatiently waiting for the data to finally finish loading and something other than the loading animation to finally appear on their computer screen.',
     'sub-title4': 'Created components can be easily modified and reused in new projects. A high percentage of code reuse increases test coverage, which in turn leads to a higher level of quality control.',
     'main-intro__footer-title1': 'Virtual DOM',
@@ -23,6 +23,16 @@ const en = {
     'main-intro__footer-sub-title1': 'Virtual DOM can improve the performance of highly loaded applications, which can reduce the likelihood of possible inconvenience and improve user experience',
     'main-intro__footer-sub-title2': 'An isomorphic approach helps render pages faster, thereby allowing users to feel more comfortable while working with your application. Search engines index such pages better.',
     'main-intro__footer-sub-title3': 'Reusing code has made it much easier to build mobile apps. If you plan to use not only the site, but also the mobile application, there is no need to hire two large development teams.',
+  },
+  'home-section-galery': {
+    'conditions-tooltip-1': 'A website selling furniture on WordPress, my job was to create a dynamic JavaScript order form.',
+    'conditions-tooltip-2': 'Only responsive layout.',
+    'conditions-tooltip-3': 'PixelPerfect layout.',
+    'conditions-tooltip-4': 'A library of popular movies on React.js/ redux. This is only a demo application - therefore, when registering, enter any e-mail and password (even - 123). However, there are many functions for sorting, deleting, editing, etc.',
+    'conditions-tooltip-5': 'Popular movies store with shopping cart and order form on React.js/ redux. This is only a demo application - therefore, when registering, enter any e-mail and password (even - 123).',
+    'conditions-tooltip-6': 'Only PixelPerfect layout with two theme.',
+    'conditions-tooltip-7': 'Only PixelPerfect layout',
+    'conditions-tooltip-8': 'Only PixelPerfect layout for photographer',
   },
   'home-section-about': {
     'about': 'About me',
@@ -34,7 +44,7 @@ const en = {
     'main__title-little1': "Soft Skills",
     'special-case1': 'Iam looking for a company that is working on a product that excites me. When I go to work every day, I want to feel refreshed and excited.\n' +
       'I am responsible for my tasks and like Robert Martin\'s views on a good developer, as his hero in the book',
-    'special-case2': ' The team for me is not just rowing colleagues, but real friends with whom there is always something good to share. I am excited about projects that make a difference on an environmental level.',
+    'special-case2': ' The team for me is not just rowing colleagues, but real friends with whom there is always something good to share. I am excited about modern and dynamic projects.',
     'main__title-little2': "Hard Skills",
     'main__title-little3': "Gallery",
     'main__title-little4': "Links",
@@ -43,8 +53,8 @@ const en = {
     'intro-title' : 'My studying way',
     'intro-sub-title' : 'First step',
     'intro-sub-title2' : 'Soft Skills',
-    'intro1' : 'I started my journey after school and after serving in the army, in the police - where I received my higher education Dnipro State University of Internal Affairs. Bachelor of Laws.',
-    'intro2' : 'Some time later, I began to study English and take my first programming steps at the ITEA Academy. Then I went through the STEP academy and after it I entered EPAM external courses, after which I went to the EPAM pre-production laboratory and after its successful completion I became a front-end developer on the REACT framework on an internal product project.'
+    'intro1' : 'I’ll start by starting to learn English and work on the first steps of programming at the ITEA Academy. Then I passed the STEP academy, and after that I took part in the current EPAM courses, after which I passed the EPAM pre-production laboratory and after successful completion I became a front-end developer of the REACT framework on an internal product project.',
+    'intro2' : 'At EPAM, I worked on a great project for the lighting platform, where we developed a large-scale benefit for students and contributors, based on a very outdated - working with such an addition, but in addition to obtaining a new forging of a fresh look with a new redesign and rewritten robot logic. I worked on improving the core functionality, introducing new features and eliminating bugs, reviewing the complex code of others and closely interacting with the Backend, QA and designers teams. This is why I have learned to think broadly and delve deeply into the skin task in order to produce a product that is effective.'
   },
   'home-section-contact': {
     'title': 'Contact',

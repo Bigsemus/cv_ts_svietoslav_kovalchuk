@@ -33,9 +33,18 @@ const IntroSection = () => {
                                 style={{color: theme.linkColor}}
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://test-movie-shop.herokuapp.com"
+                                href="https://movies-library-teal.vercel.app/"
                             >
-                                &nbsp;Simple movie shop&nbsp;
+                                &nbsp;MovieLibrary&nbsp;
+                            </a>
+                            <a
+                                className={classNames("main__link-text", styleCursorPointer)}
+                                style={{color: theme.linkColor}}
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://movie-shop-eight.vercel.app"
+                            >
+                                &nbsp;/  Simple movie shop&nbsp;
                             </a>
                             {useTranslation('home-section-intro.sub-title2')}
                             {useTranslation('home-section-intro.sub-title3')}

@@ -139,15 +139,6 @@ const AboutLeftContent: React.FC<Props> = (props) => {
                         className="main__item-point"
                         style={{color: theme.linkColor}}
                     >
-                        Poland
-                    </span>
-                    &nbsp;• A1 level
-                </li>
-                <li className="text-color-list__item">
-                    <span
-                        className="main__item-point"
-                        style={{color: theme.linkColor}}
-                    >
                         Team work
                     </span>
                     &nbsp;• Jira/Scrum master

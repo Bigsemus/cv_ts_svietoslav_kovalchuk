@@ -19,3 +19,13 @@
     color: $color-accordeon-hover;
   }
 }
+
+.tooltip{
+  width: 350px;
+  height: 90px;
+  opacity: 0;
+  transition: opacity 1s;
+  &Show{
+    opacity: 1;
+  }
+}
