@@ -27,7 +27,8 @@ const StudyingSection: React.FC<Props> = (props) => {
                         </h3>
                         <p className="main-about__special-case">
                             {useTranslation('studying-section.intro1')}
-                            <br />
+                            <br/>
+                            <br/>
                             {useTranslation('studying-section.intro2')}
                         </p>
 
@@ -50,10 +51,21 @@ const StudyingSection: React.FC<Props> = (props) => {
                             className="main__item-point"
                             style={{color: theme.linkColor}}
                         >
+                            "HAY" named after M.E. Zhukovsky
+                        </span>
+                        &nbsp;• Automation, computer-integrated technologies and robotics :
+                         2023 -  2024
+
+                    </li>
+                    <li className="text-color-list__item">
+                        <span
+                            className="main__item-point"
+                            style={{color: theme.linkColor}}
+                        >
                             EPAM
                         </span>
                         &nbsp;• Production project :
-                        July 2022 - till now
+                        July 2022 - December 2022
 
                     </li>
                     <li className="text-color-list__item">
