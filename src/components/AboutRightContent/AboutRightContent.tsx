@@ -24,105 +24,33 @@ const AboutRightContent = () => {
     const styleCursorPointer = useCursorPointerWithTheme();
     const cx = classNames.bind(classes);
 
-    const [isShowTooltip1, setIsShowTooltip1] = useState(false);
-    const [isShowTooltip2, setIsShowTooltip2] = useState(false);
-    const [isShowTooltip3, setIsShowTooltip3] = useState(false);
-    const [isShowTooltip4, setIsShowTooltip4] = useState(false);
-    const [isShowTooltip5, setIsShowTooltip5] = useState(false);
-    const [isShowTooltip6, setIsShowTooltip6] = useState(false);
-    const [isShowTooltip7, setIsShowTooltip7] = useState(false);
-    const [isShowTooltip8, setIsShowTooltip8] = useState(false);
+    const [tooltips, setTooltips] = useState<Record<string, boolean>>({
+        tooltip1: false,
+        tooltip2: false,
+        tooltip3: false,
+        tooltip4: false,
+        tooltip5: false,
+        tooltip6: false,
+        tooltip7: false,
+        tooltip8: false,
+    });
 
     const handleShowTooltip = (numTooltip: string) => {
-        switch (numTooltip) {
-            case 'tooltip1':
-                setIsShowTooltip1(true);
-                break;
-            case 'tooltip2':
-                setIsShowTooltip2(true);
-                break;
-            case 'tooltip3':
-                setIsShowTooltip3(true);
-                break;
-            case 'tooltip4':
-                setIsShowTooltip4(true);
-                break;
-            case 'tooltip5':
-                setIsShowTooltip5(true);
-                break;
-            case 'tooltip6':
-                setIsShowTooltip6(true);
-                break;
-            case 'tooltip7':
-                setIsShowTooltip7(true);
-                break;
-            case 'tooltip8':
-                setIsShowTooltip8(true);
-                break;
-        }
-
-    }
+        setTooltips(prevState => ({
+            ...prevState,
+            [numTooltip]: true
+        }));
+    };
 
     const handleHideTooltip = (numTooltip: string) => {
-        switch (numTooltip) {
-            case 'tooltip1':
-                setIsShowTooltip1(false);
-                break;
-            case 'tooltip2':
-                setIsShowTooltip2(false);
-                break;
-            case 'tooltip3':
-                setIsShowTooltip3(false);
-                break;
-            case 'tooltip4':
-                setIsShowTooltip4(false);
-                break;
-            case 'tooltip5':
-                setIsShowTooltip5(false);
-                break;
-            case 'tooltip6':
-                setIsShowTooltip6(false);
-                break;
-            case 'tooltip7':
-                setIsShowTooltip7(false);
-                break;
-            case 'tooltip8':
-                setIsShowTooltip8(false);
-                break;
-        }
-    }
+        setTooltips(prevState => ({
+            ...prevState,
+            [numTooltip]: false
+        }));
+    };
 
-    const tooltipStyle_1 = cx('tooltip', {
-        tooltipShow: isShowTooltip1,
-    });
-
-    const tooltipStyle_2 = cx('tooltip', {
-        tooltipShow: isShowTooltip2,
-    });
-
-    const tooltipStyle_3 = cx('tooltip', {
-        tooltipShow: isShowTooltip3,
-    });
-
-    const tooltipStyle_4 = cx('tooltip', {
-        tooltipShow: isShowTooltip4,
-    });
-
-    const tooltipStyle_5 = cx('tooltip', {
-        tooltipShow: isShowTooltip5,
-    });
-
-    const tooltipStyle_6 = cx('tooltip', {
-        tooltipShow: isShowTooltip6,
-    });
-
-    const tooltipStyle_7 = cx('tooltip', {
-        tooltipShow: isShowTooltip7,
-    });
-
-    const tooltipStyle_8 = cx('tooltip', {
-        tooltipShow: isShowTooltip8,
-    });
+    const getTooltipStyle = (tooltipKey: string) =>
+        cx('tooltip', { tooltipShow: tooltips[tooltipKey] });
 
 
 
@@ -153,7 +81,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-1')}
-                        className={tooltipStyle_1}
+                        className={getTooltipStyle('tooltip1')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
@@ -169,7 +97,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-2')}
-                        className={tooltipStyle_2}
+                        className={getTooltipStyle('tooltip2')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
@@ -185,7 +113,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-3')}
-                        className={tooltipStyle_3}
+                        className={getTooltipStyle('tooltip3')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
@@ -201,7 +129,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-4')}
-                        className={tooltipStyle_4}
+                        className={getTooltipStyle('tooltip4')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
@@ -217,7 +145,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-5')}
-                        className={tooltipStyle_5}
+                        className={getTooltipStyle('tooltip5')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
@@ -233,7 +161,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-6')}
-                        className={tooltipStyle_6}
+                        className={getTooltipStyle('tooltip6')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
@@ -249,7 +177,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-7')}
-                        className={tooltipStyle_7}
+                        className={getTooltipStyle('tooltip7')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
@@ -265,7 +193,7 @@ const AboutRightContent = () => {
                 <div className="flickr__item">
                     <Tooltip
                         tooltipText={useTranslation('home-section-galery.conditions-tooltip-8')}
-                        className={tooltipStyle_8}
+                        className={getTooltipStyle('tooltip8')}
                     />
                     <a
                         className={classNames(styleCursorPointer)}
